@@ -1,0 +1,11 @@
+version: '3.1'
+
+services:
+  react-resume:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: ${CONTAINER_NAME:-react-resume}
+    restart: always
+    ports:
+      - 9992:5000
